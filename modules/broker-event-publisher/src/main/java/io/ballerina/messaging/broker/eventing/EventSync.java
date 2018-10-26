@@ -25,7 +25,6 @@ import java.util.Map;
  */
 public interface EventSync {
 
-
     String getName();
     void publish(int id, Map<String, String> properties); //string
     void activate();
