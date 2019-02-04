@@ -137,14 +137,14 @@ case $queue_name in
             then
                  rm resources/jndi_queue.properties
             fi
-            printf "connectionfactory.QueueConnectionFactory=amqp://admin:admin@clientID/carbon?brokerlist='tcp://"$host_url":${testplan_user_inputs["AMQPListenerPort"]}'\nqueue.QueueName=micro_benchmark_queue1" >> resources/jndi_queue.properties
+            printf "connectionfactory.QueueConnectionFactory=amqp://admin:admin@clientID/carbon?brokerlist='tcp://localhost:${testplan_user_inputs["AMQPListenerPort"]}'\nqueue.QueueName=micro_benchmark_queue1" >> resources/jndi_queue.properties
         ;;
     micro_benchmark_queue2)
         if [ -e resources/jndi_topic.properties ];
             then
                  rm resources/jndi_topic.properties
             fi
-            printf "connectionfactory.TopicConnectionFactory=amqp://admin:admin@clientID/carbon?brokerlist='tcp://"$host_url":${testplan_user_inputs["AMQPListenerPort"]}'\ntopic.TopicName=micro_benchmark_queue2" >> resources/jndi_topic.properties
+            printf "connectionfactory.TopicConnectionFactory=amqp://admin:admin@clientID/carbon?brokerlist='tcp://localhost:${testplan_user_inputs["AMQPListenerPort"]}'\ntopic.TopicName=micro_benchmark_queue2" >> resources/jndi_topic.properties
         ;;
 esac
 
